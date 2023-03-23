@@ -1,0 +1,259 @@
+.u-text {
+  line-height: 2em;
+}
+.u-section-1 .u-sheet-1 {
+  min-height: 90vh;
+}
+
+.u-section-1 .u-list-1 {
+  margin-bottom: 0;
+  margin-top: -36px;
+}
+
+.u-section-1 .u-repeater-1 {
+  grid-gap: 10px 10px;
+  grid-template-columns: 100%;
+  min-height: 90vh;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 3.75rem;
+  background-image: none;
+  margin: 40px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 30px auto 0;
+}
+
+.u-section-1 .u-group-1 {
+  width: 73px;
+  background-image: none;
+  min-height: 38px;
+  height: auto;
+  margin: 24px auto 0 449px;
+}
+
+.u-section-1 .u-text-3 {
+  width: 46px;
+  margin: 5px auto 0;
+}
+
+.u-section-1 .u-group-2 {
+  width: 73px;
+  background-image: none;
+  min-height: 38px;
+  height: auto;
+  margin: -38px auto 0;
+}
+
+.u-section-1 .u-text-4 {
+  width: 46px;
+  margin: 5px auto 0;
+}
+
+.u-section-1 .u-group-3 {
+  width: 73px;
+  background-image: none;
+  min-height: 38px;
+  height: auto;
+  margin: -38px 449px 0 auto;
+}
+
+.u-section-1 .u-text-5 {
+  width: 46px;
+  margin: 5px auto 0;
+}
+
+.u-section-1 .u-line-1 {
+  transform-origin: right center 0px;
+  width: 775px;
+  margin: 22px auto 0;
+}
+
+.u-section-1 .u-text-6 {
+  margin: 28px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-2 {
+    width: auto;
+    margin-top: 13px;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-top: 21px;
+    margin-left: auto;
+    height: auto;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-top: 0;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-right: 348px;
+    height: auto;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-top: 0;
+  }
+
+  .u-section-1 .u-group-3 {
+    margin-right: auto;
+    margin-left: 348px;
+    height: auto;
+  }
+
+  .u-section-1 .u-line-1 {
+    margin-top: 12px;
+  }
+
+  .u-section-1 .u-text-6 {
+    width: auto;
+    margin-top: 21px;
+    margin-bottom: -14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-repeater-1 {
+    min-height: 386px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: 531px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: 21px;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-top: 24px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-right: auto;
+    margin-left: 239px;
+  }
+
+  .u-section-1 .u-group-3 {
+    margin-right: 239px;
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-line-1 {
+    margin-top: 24px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-text-6 {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-repeater-1 {
+    min-height: 494px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: 13px;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-top: 26px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-top: 5px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-right: 148px;
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-group-3 {
+    margin-right: auto;
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-line-1 {
+    margin-top: 13px;
+    width: auto;
+    margin-right: initial;
+    margin-left: initial;
+  }
+
+  .u-section-1 .u-text-6 {
+    margin-top: 23px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-repeater-1 {
+    min-height: 355px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-bottom: 13px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.875rem;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: 12px;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-top: 32px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-right: auto;
+    margin-left: 49px;
+  }
+
+  .u-section-1 .u-group-3 {
+    margin-right: 49px;
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-line-1 {
+    margin-top: 19px;
+    width: auto;
+    margin-right: initial;
+    margin-left: initial;
+  }
+
+  .u-section-1 .u-text-6 {
+    margin-top: 17px;
+  }
+}
+
+.questionHeader {
+  color: white;
+}
+.questionText {
+  color: white;
+}
+.answerText {
+  color: white;
+  text-align: right;
+  padding-left: 35%;
+}
