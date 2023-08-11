@@ -18,6 +18,8 @@
 
   width: 100%;
   height: 10vh;
+  min-height: 50px;
+  max-height: 85px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -29,12 +31,22 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
+  gap: 10px;
+  margin-right: 1em;
+}
+.navLink {
+  color: var(--off-white);
+}
+.activeLink {
+  color: var(--off-grey) !important;
 }
 #lensesTitle {
   color: var(--off-white);
+  margin-left: 1em;
 }
 
 #artView {
+
   background-color: #00AA00;
 
   width: 100%;
@@ -42,8 +54,13 @@
 }
 
 #siteDesc {
+
   background-color: #0000AA;
 
   width: 100%;
   height: 100vh;
+}
+
+@media screen and (max-width: 550px) {
+  
 }
