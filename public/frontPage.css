@@ -1,53 +1,7 @@
-* {
-  margin: 0;
-}
-:root {
-  --off-black: #110F10;
-  --dark-highlight: hsla(304, 55%, 13%, 1);
-  --darker-violet: #270724;
-  --dark-violet: hsla(304, 55%, 23%, 1);
-  --bright-violet: hsla(304, 63%, 69%, 1);
-  --dark-grey: #484649;
-  --darker-grey: rgba(46, 45, 47,1);
-  --off-grey: hsla(288, 2%, 55%, 1);
-  --off-white: rgb(246, 244, 247);    
-}
-#navbar {
-
-  background-color: #AA0000;
-
-  width: 100%;
-  height: 10vh;
-  min-height: 50px;
-  max-height: 85px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-#links { 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-right: 1em;
-}
-.navLink {
-  color: var(--off-white);
-}
-.activeLink {
-  color: var(--off-grey) !important;
-}
-#lensesTitle {
-  color: var(--off-white);
-  margin-left: 1em;
-}
 
 #artView {
 
-  background-color: #00AA00;
+  background-color: rgba(0,255,0,0.5);
 
   width: 100%;
   height: 90vh;
@@ -55,12 +9,12 @@
 
 #siteDesc {
 
-  background-color: #0000AA;
+  background-color: rgba(0,0,255,0);
 
   width: 100%;
   height: 100vh;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 770px) {
   
 }
