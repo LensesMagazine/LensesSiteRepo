@@ -49,11 +49,13 @@ html, body {
 }
 
 #catalogDescHolder {
-  background-color: var(--darker-grey);
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 6px 6px 5px 3px rgba(0, 0, 0, 0.6);
   position: relative;
   top: 25vh;
-  width: 70vw;
-  left: 15vw;
+  width: 60vw;
+  left: 20vw;
   height: 40vh;
   padding: 0 10px;
   border-radius: 20px;
