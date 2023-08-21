@@ -1,20 +1,136 @@
-
+html, body {
+  overflow-x: clip;
+}
 #catalogAd {
 
-  background-color: rgba(0,255,0,0.5);
-
+  background-color: var(--darker-violet);
+  background-image: url("/static/2023_catalog_preview.png");
+  background-size: 40%;
+  animation: floataround 120s linear infinite;
   width: 100%;
-  height: 90vh;
+  height: calc(100vh - 85px);
+}
+@keyframes floataround {
+  0% {
+    background-position: top left;
+  }
+  17% {
+    background-position: top center;
+  }
+  34% {
+    background-position: top right;
+  }
+  51% {
+    background-position: bottom right;
+  }
+  68% {
+    background-position: bottom center;
+  }
+  85% {
+    background-position: bottom left;
+  }
+  100% {
+    background-position: top left;
+  }
 }
 
-#siteDesc {
+#banner {
+  background-color: var(--off-white);
+  color: var(--off-black);
+  width: 200%;
+  height: 120px;
+  font-size: 500%;
+  position: relative; 
+  top: 13vh;
+  left: -50%;
+  line-height: normal;
+  padding-top: 17px;
+  transform: rotate(-4deg);
+}
 
-  background-color: rgba(0,0,255,0);
-
+#catalogDescHolder {
+  background-color: var(--darker-grey);
+  position: relative;
+  top: 25vh;
+  width: 70vw;
+  left: 15vw;
+  height: 40vh;
+  padding: 0 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#cDesc {
+  padding-top: 2em;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#cDesc * {
+  color: var(--off-white);
+  font-size: 200%;
+  text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  line-height: 1em;
+}
+#catalogViewBtn {
+  background-color: var(--off-white);
+  color: var(--off-black);
+  border-radius: 20px;
+  padding: 0 10px;
+  height: 30%;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  font-size: 250%;
+  font-weight: bold;
+  transition: background-color .3s;
+}
+#catalogViewBtn:hover {
+  background-color: var(--dark-violet);
+  color: var(--off-white);
+}
+
+#motionStop {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  height: 40px;
+  border-radius: 20px;
+}
+.stopmoving {
+  color: var(--off-grey);
+  background-color: var(--off-white);
+}
+.startmoving {
+  color: var(--off-white);
+  background-color: var(--off-black);
+}
+
+@media screen and (max-width: 1200px) and (min-width: 771px) {
+  #catalogAd {
+    background-size: 50%;
+  }
 }
 
 @media screen and (max-width: 770px) {
-  
+  #catalogAd {
+    background-size: 150%;
+  }
+  #banner {
+    width: 400%;
+    left: -150%;
+  }
 }

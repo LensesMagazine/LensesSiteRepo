@@ -18,6 +18,22 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Dancing+Script:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
 
+    <script type="text/javascript">
+      function aniToggle() {
+        var x = document.getElementById("motionStop");
+        if (x.innerHTML === "stop moving!") {
+          x.innerHTML = "start moving!";
+          x.classList="startmoving";
+          document.getElementById("catalogAd").style.animationPlayState = "paused";
+        } else {
+          x.innerHTML = "stop moving!";
+          x.classList="stopmoving";
+          document.getElementById("catalogAd").style.animationPlayState = "running";
+        }
+      }
+    </script>
+
+    <!--meta http-equiv="refresh" content="1"-->
   </head>
   <body data-lang="en">
     <section id="navbar">
@@ -43,14 +59,35 @@
       <img id="downArrow" src="/static/Down Icon.svg"  onclick="toggleDrop();"/>
     </section>
     <section id="catalogAd">
-      <h>NEW! NEW! NEW! NEW! NEW! NEW! NEW!</h>
-      <h>2023 Early Pieces Catalog</h>
-      <h>Thank you for supporting the birth of Lenses Magazine!</h>
-      <a>View Catalog</a>
-
+      <h3 id="banner">NEW! NEW! NEW! NEW! NEW! NEW! NEW!</h3>
+      <div id="catalogDescHolder">
+        <div id="cDesc">
+          <h1>2023 Early Pieces Catalog</h1>
+          <p>Thank you for supporting the birth of Lenses Magazine!</p>
+        </div>
+        <a id="catalogViewBtn" href="/v/cat">View Catalog</a>
+      </div>
+      <button id="motionStop" class="stopmoving" onclick="aniToggle();">stop moving!</button>
   </section>
   <section id="siteDesc">
-
+    <div class="split">
+      <div class="split30">
+        <img src="/static/Logo.svg" alt="Lenses Logo" id="logo">
+      </div>
+      <div class="split60">
+        <h1>What is Lenses?</h1>
+        <p>Lenses is Doral Academy's first student-run literature and arts magazine, where all student creators have a platform to share their work!</p>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split60">
+        <h1>How do I submit?</h1>
+        <p>Click the button below to submit your work! You can submit as many pieces as you want, and you can submit to any categories as you want!</p>
+      </div>
+      <div class="split30">
+        <a href="/submit" id="submitBtn">Submit</a>
+      </div>
+    </div>
   </section>
     <footer>
       <p style="padding-top: 2em">made with love, for art &lt;3 (now in purple!)</p>
