@@ -1,0 +1,128 @@
+#mainView {
+    min-height: calc(100vh - 85px);
+}
+#fullscreenPiece {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 85px);
+}
+#pieceInfo {
+    width: calc(100% - 2em);
+    background-color: var(--darker-grey);
+    color: var(--off-white);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+}
+@media screen and (max-width: 800px) {
+    #mobileNavbar {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110px;
+        z-index: 120;
+    }
+    #mainView {
+        margin-top: 110px;
+        min-height: calc(100vh - 110px);
+    }
+    #pieceInfo {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+    #titleAndAuthor {
+        width: 100% !important;
+    }
+}
+#titleAndAuthor {
+    min-width: 100px;
+    width: 25vw;
+}
+#pieceTitle {
+    font-size: xx-large;
+    line-height: normal;
+}
+#pieceDesc {
+    width: 65vw;
+}
+/* FOR VIS PIECES */
+#pieceImage {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+#infoHint {
+    display: block;
+    position: absolute;
+    left: 3em;
+    bottom: 3em;
+    width: 5vw;
+    min-width: 50px;
+    background-color: rgba(255,255,255,.4);
+    backdrop-filter: blur(100px);
+    border-radius: 4vw;
+    animation: bounce .75s ease-in-out infinite forwards, fadeOut 6s linear 1 forwards;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 2;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* START LIT STUFF */
+#litInfo {
+    width: calc(100% - 3em);
+    min-height: 20vh;
+    background-color: hsla(288, 2%, 55%, 0.1);
+    backdrop-filter: blur(10px);
+    color: var(--off-white);
+    backdrop-filter: opacity(10%);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#litView {
+    min-height: calc(100vh);
+}
+#pieceFrame {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    color: var(--off-white);
+}
+@media screen and (max-width: 800px) {
+    #litInfo {
+        margin-top: 110px;
+        flex-direction: column !important;
+    }
+    #litView {
+        min-height: calc(71vh - 110px);
+    }
+}

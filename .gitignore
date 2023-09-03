@@ -1,6 +1,4 @@
-static/videos/
 functions/node_modules
 src/
-static/
 *.log
 firebase-debug.log
