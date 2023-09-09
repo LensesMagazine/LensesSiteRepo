@@ -8,6 +8,7 @@
     align-items: center;
     width: 100%;
     height: calc(100vh - 85px);
+    border-width: 0;
 }
 #pieceInfo {
     width: calc(100% - 2em);

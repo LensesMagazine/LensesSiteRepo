@@ -6,13 +6,14 @@ const visTemplate = `
 <img id="pieceImage" src="[VISLINK]" alt="Fullscreen Image of [PIECENAME]"/>
 </div>
 `;
-const mvTemplate = `
+/*const mvTemplate = `
 <div id="fullscreenPiece">
 <video id="pieceImage" controls alt="Fullscreen Video of [PIECENAME]">
     <source src="[VISLINK]" type="video/mp4">
 </video>
 </div>
-`;
+`;*/
+const mvTemplate = `<iframe id="fullscreenPiece" src="[VISLINK]" allow="autoplay"></iframe>`;
 const litTemplate = 
 //<iframe id="pieceFrame" src="[VISLINK]" alt="[PIECENAME]"></iframe>
 `<embed id="pieceFrame" src="[VISLINK]#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf"/>`;
@@ -69,7 +70,8 @@ function renderPiece() {
     else if (pieceClass == "mv") {
         var links = pieceData.docID.split(",");
         for (var link in links) {
-            var imgLink = "https://drive.google.com/uc?export=view&id=" + links[link];
+            //var imgLink = "https://drive.google.com/uc?export=view&id=" + links[link];
+            var imgLink = "https://drive.google.com/file/d/" + links[link] + "/preview";
             var exportableLink = getExportableLink(imgLink);
             document.getElementById("mainView").innerHTML = mvTemplate.replace("[VISLINK]",imgLink).replace("[PIECENAME]",pieceData.title);
         }

@@ -61,7 +61,6 @@ function submissionHTML(id) {
         pieceLink += databaseData[id].docID;
     }
 
-
     return previewTemplate.replace("[PIECEID]",id).replace("[PREVIEWLINK]",pieceLink).replace("[PIECENAME]",databaseData[id].title).replace("[PIECENAME]",databaseData[id].title).replace("[PIECEAUTHOR]",databaseData[id].author).replace("[PIECEDESC]",databaseData[id].desc);
 }
 
@@ -159,7 +158,7 @@ checkDirection();
 });
 
 function a(artClass) {
-    if (artClass=="lit" || artClass=="art") {
+    if (artClass=="lit" || artClass=="art" || artClass=="mv") {
         previewTemplate = litTemplate;
     }
     mainbody = document.getElementById("mainBody");
