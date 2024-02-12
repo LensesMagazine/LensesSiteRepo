@@ -89,6 +89,7 @@ footer {
 /* MAIN BODY */
 section#mainBody {
   padding: 20px;
+  color: var(--off-white);
 }
 
 section#mainBody > h2 {
