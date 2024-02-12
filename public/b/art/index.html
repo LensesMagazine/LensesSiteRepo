@@ -51,7 +51,42 @@
 
       <h3>Latest Articles</h3>
       <div class="articles">
-        
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const articlesContainer = document.getElementById("articles");
+
+            // Fetch JSON data
+            fetch("/art.json")
+              .then(response => response.json())
+              .then(data => {
+                // Create article cards
+                data.articles.forEach(article => {
+                  const articleCard = document.createElement("div");
+                  articleCard.classList.add("article");
+
+                  const title = document.createElement("h4");
+                  title.textContent = article.title;
+
+                  const summary = document.createElement("p");
+                  summary.textContent = article.summary;
+
+                  const readMoreLink = document.createElement("a");
+                  readMoreLink.textContent = "Read More";
+                  readMoreLink.href = article.url;
+                  readMoreLink.target = "_blank";
+
+                  articleCard.appendChild(title);
+                  articleCard.appendChild(summary);
+                  articleCard.appendChild(readMoreLink);
+
+                  articlesContainer.appendChild(articleCard);
+                });
+              })
+              .catch(error => {
+                console.error("Error fetching articles: ", error);
+              });
+          });
+        </script>
       </div>
     </section>
     <footer>
