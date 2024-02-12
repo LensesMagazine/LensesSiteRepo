@@ -86,6 +86,54 @@ footer {
   position: absolute;
 }
 
+/* MAIN BODY */
+#mainBody {
+  padding: 20px;
+}
+
+#mainBody h2 {
+  color: var(--off-white);
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#mainBody h3 {
+  color: var(--off-white);
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.article {
+  background-color: var(--dark-violet);
+  color: var(--off-white);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.article h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.article a {
+  color: var(--bright-violet);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+
+
 /*
 
 BEGIN MOBILE VIEW SHENANIGANS
