@@ -87,17 +87,17 @@ footer {
 }
 
 /* MAIN BODY */
-#mainBody {
+section#mainBody {
   padding: 20px;
 }
 
-#mainBody h2 {
+section#mainBody h2 {
   color: var(--off-white);
   font-size: 2em;
   margin-bottom: 20px;
 }
 
-#mainBody h3 {
+section#mainBody h3 {
   color: var(--off-white);
   font-size: 1.5em;
   margin-top: 30px;
