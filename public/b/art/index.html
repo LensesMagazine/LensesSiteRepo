@@ -51,22 +51,7 @@
 
       <h3>Latest Articles</h3>
       <div class="articles">
-        {% for article in articles %}
-          <article class="article">
-            <span class="date"><a href="/a/{{ article.id }}">{{ article.published_at|strftime("%Y-%m-%d") }}</a>
-            <h4>{{ article.title }}</h4>
-            <p class="date"><span class="month">{{ article.published_at|slice(5,2) }}</span><span class="day">{{ article.pubished
-            <span class="date"><a href="/a/{{ article.id }}">{{ article.timestamp | date("M d") }}, {{ article.timestamp | date("Y")
-            <p class="date"><span class="month">{{ article.published_at|slice(5,2) }}</span><span class="day">{{ article.pub
-            <span class="date"><a href={{ "/a/" ~ article.id }}>{{ article.date | date("d MMMM yyyy")}}</a></span
-            <span class="date"><a href="/a/{{ article['id'] }}">{{ article["date"] }}</a></span><br />
-            <a href="/u/{{ article["user_id"] }}" target="_blank">{{ article["username"] }}</a> -  
-            <a href="/g/{{ article["group_id"] }}" target="_blank">{{ article["groupname"] }}</a>
-            <p class="title"><a href="/a/{{ article['id'] }}">{{ article["title"] }}</a></p>
-            <!--<p class="content">{{ article["content"][0:50] }}...</p>
-            <button class="readMoreButton" onclick="window.location='/a/{{ article['id'] }}';">Read More</button>
-          </article>
-        {% endfor %}
+        
       </div>
     </section>
     <footer>
