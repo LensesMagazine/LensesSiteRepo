@@ -127,6 +127,15 @@ section#newMain {
       justify-content: space-between;
       flex-direction: column;
       flex-wrap: nowrap;
+      & > .title {
+        font-size: 32px;
+      }
+      & > .author {
+        font-size: 24px;
+      }
+      & > .content {
+        font-size: 18px;
+      }
     }
   }
 }
