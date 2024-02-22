@@ -126,17 +126,20 @@ section#newMain {
       height: 60vmin;
       display: flex;
       margin: auto;
-      justify-content: space-between;
       flex-direction: column;
       flex-wrap: nowrap;
       & > .title {
         font-size: 32px;
+        display: flex;
       }
       & > .author {
         font-size: 24px;
+        display: flex;
       }
       & > .content {
         font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
       }
     }
   }
