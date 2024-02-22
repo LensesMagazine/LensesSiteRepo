@@ -85,7 +85,7 @@ footer {
   z-index: 100;
   position: absolute;
 }
-
+/* Aryan - Changes */
 section#newMain {
   padding: 20px;
 
@@ -104,12 +104,30 @@ section#newMain {
     margin-bottom: 15px;
   }
 
-  .article {
+  .articles {
     background-color: var(--dark-violet);
     color: var(--off-white);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    & > .article {
+      background-color: var(--off-white);
+      color: var(--dark-violet);
+      padding: 15px;
+      border-radius: 9px;
+      margin-block: 20px;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 }
 
