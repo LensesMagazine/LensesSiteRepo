@@ -122,6 +122,8 @@ section#newMain {
       padding: 15px;
       border-radius: 9px;
       margin-block: 20px;
+      width: 45vmin;
+      height: 60vmin;
       display: flex;
       margin: auto;
       justify-content: space-between;
