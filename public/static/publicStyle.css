@@ -110,7 +110,7 @@ section#newMain {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    display: flex;
+    display: grid;
     margin: auto;
     justify-content: center;
     flex-wrap: wrap;
