@@ -110,7 +110,7 @@ section#newMain {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    display: grid;
+    display: flex;
     margin: auto;
     justify-content: center;
     flex-wrap: wrap;
@@ -126,8 +126,8 @@ section#newMain {
       height: 60vmin;
       display: flex;
       margin: auto;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
+      flex-wrap: nowrap;
       & > .title {
         font-size: 32px;
         display: flex;
