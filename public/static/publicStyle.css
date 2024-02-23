@@ -121,6 +121,8 @@ section#newMain {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+    row-gap: 1vmin;
+    width: 50vmin;
 
     & > .article {
       background-color: var(--off-white);
