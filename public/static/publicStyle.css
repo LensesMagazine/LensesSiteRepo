@@ -112,6 +112,7 @@ section#newMain {
     margin-bottom: 20px;
     display: flex;
     width: fit-content;
+    height: fit-content;
     margin: auto;
     justify-content: center;
     flex-wrap: wrap;
@@ -124,7 +125,7 @@ section#newMain {
       border-radius: 9px;
       margin-block: 20px;
       width: 45vmin;
-      height: 60vmin;
+      height: fit-content;
       display: flex;
       margin: auto;
       flex-direction: column;
