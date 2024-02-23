@@ -126,8 +126,8 @@ section#newMain {
       height: 60vmin;
       display: flex;
       margin: auto;
-      flex-direction: column;
-      flex-wrap: nowrap;
+      flex-direction: row;
+      flex-wrap: wrap;
       & > .title {
         font-size: 32px;
         display: flex;
