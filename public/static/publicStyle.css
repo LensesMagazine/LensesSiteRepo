@@ -118,10 +118,10 @@ section#newMain {
     width: fit-content;
     height: fit-content;
     margin: auto;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
-    row-gap: 1vmin;
+    gap: 1vmin;
     width: 50vmin;
 
     & > .article {
