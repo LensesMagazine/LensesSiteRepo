@@ -85,6 +85,73 @@ footer {
   z-index: 100;
   position: absolute;
 }
+/* Aryan - Changes */
+section#newMain {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  & > h2 {
+    color: var(--off-white);
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  & > p {
+    color: white;
+  }
+  & > h3 {
+    color: var(--off-white);
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .articles {
+    background-color: var(--dark-violet);
+    color: var(--off-white);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1vmin;
+    width: 50vmin;
+
+    & > .article {
+      background-color: var(--off-white);
+      color: var(--dark-violet);
+      padding: 15px;
+      border-radius: 9px;
+      margin-block: 20px;
+      width: 45vmin;
+      height: fit-content;
+      display: flex;
+      margin: auto;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      & > .title {
+        font-size: 32px;
+        display: flex;
+      }
+      & > .author {
+        font-size: 24px;
+        display: flex;
+      }
+      & > .content {
+        font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
 
 /*
 
