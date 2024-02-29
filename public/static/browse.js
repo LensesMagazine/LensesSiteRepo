@@ -30,24 +30,33 @@ function loadSubmissions(subClass) {
     const http = new XMLHttpRequest();
     const url = "https://us-central1-lensesmagazine-a8639.cloudfunctions.net/dbreadall"; 
     http.open("GET", url);
-    http.setRequestHeader("class","active/"+subClass);
+    http.setRequestHeader("class", "active/" + subClass); // Fixed setting the header
     http.send();
     http.onreadystatechange = (e) => {
-        if(http.readyState==4 && http.status==200) {
-            databaseData = JSON.parse(http.responseText);
-            if ((new URLSearchParams(window.location.search)).get("p") != null) {
-                target_ID = (new URLSearchParams(window.location.search)).get("p");
-                let entries = Object.entries(databaseData);
-                for (var i=0; i < entries.length; i++) {
-                    if (entries[i][0] == target_ID) {
-                        console.log("found " + entries[i][0] + " at " + i);
-                        focusedIndex = i;
-                        break;
+        if (http.readyState == 4) {
+            if (http.status == 200) {
+                databaseData = JSON.parse(http.responseText);
+                const target_ID = (new URLSearchParams(window.location.search)).get("p");
+                if (target_ID != null) {
+                    let foundIndex = -1;
+                    for (var i = 0; i < databaseData.length; i++) {
+                        if (databaseData[i].id == target_ID) {
+                            console.log("found " + databaseData[i].id + " at " + i);
+                            foundIndex = i;
+                            break;
+                        }
                     }
+                    if (foundIndex != -1) {
+                        focusedIndex = foundIndex;
+                        renderPieces(foundIndex, "up");
+                    } else {
+                        renderPieces(0, "up");
+                    }
+                } else {
+                    renderPieces(0, "up");
                 }
-                renderPieces(i,"up");
             } else {
-                renderPieces(0,"up");
+                console.error("Error loading submissions: " + http.statusText);
             }
         }
     }
