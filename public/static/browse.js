@@ -3,8 +3,8 @@ var currentClass = "none";
 var focusedIndex = 0;
 var isRunning = false;
 var isKeyRunning = false;
-var previewTemplate = 
-`<div class="preview [ANIMATION]" id="[PIECEID]" onclick="[FUNCTION]">
+var previewTemplate = `
+<div class="preview [ANIMATION]" id="[PIECEID]" onclick="[FUNCTION]">
 <div class="previewimage">
   <img src="[PREVIEWLINK]" alt="Preview of [PIECENAME]">
 </div>
@@ -14,8 +14,8 @@ var previewTemplate =
   <p class="piecedesc">[PIECEDESC]</p>
 </div>
 </div>`;
-const litTemplate = 
-`<div class="preview [ANIMATION]" id="[PIECEID]" onclick="[FUNCTION]">
+const litTemplate = `
+<div class="preview [ANIMATION]" id="[PIECEID]" onclick="[FUNCTION]">
 <div class="previewtext">
   <h1 class="piecename">[PIECENAME] by [PIECEAUTHOR]</h1>
   <hr class="divider" />
@@ -26,80 +26,53 @@ var mainbody;
 
 function loadSubmissions(subClass) {
     databaseData = [];
-    currentClass = subClass; 
+    currentClass = subClass;
     const http = new XMLHttpRequest();
-    const url = "https://us-central1-lensesmagazine-a8639.cloudfunctions.net/dbreadall"; 
+    const url = "https://us-central1-lensesmagazine-a8639.cloudfunctions.net/dbreadall";
     http.open("GET", url);
-    http.setRequestHeader("class", "active/" + subClass); // Fixed setting the header
+    http.setRequestHeader("class", "active/" + subClass);
     http.send();
     http.onreadystatechange = (e) => {
-        if (http.readyState == 4) {
-            if (http.status == 200) {
-                databaseData = JSON.parse(http.responseText);
-                const target_ID = (new URLSearchParams(window.location.search)).get("p");
-                if (target_ID != null) {
-                    let foundIndex = -1;
-                    for (var i = 0; i < databaseData.length; i++) {
-                        if (databaseData[i].id == target_ID) {
-                            console.log("found " + databaseData[i].id + " at " + i);
-                            foundIndex = i;
-                            break;
-                        }
-                    }
-                    if (foundIndex != -1) {
-                        focusedIndex = foundIndex;
-                        renderPieces(foundIndex, "up");
-                    } else {
-                        renderPieces(0, "up");
-                    }
-                } else {
-                    renderPieces(0, "up");
-                }
-            } else {
-                console.error("Error loading submissions: " + http.statusText);
-            }
+        if (http.readyState == 4 && http.status == 200) {
+            databaseData = JSON.parse(http.responseText);
+            const target_ID = (new URLSearchParams(window.location.search)).get("p");
+            focusedIndex = target_ID ? Object.keys(databaseData).indexOf(target_ID) : 0;
+            renderPieces(focusedIndex, "up");
         }
     }
 }
 
 function submissionHTML(id) {
     var pieceLink = "https://drive.google.com/uc?export=view&id=";
-    if (databaseData[id].docID.indexOf(",") > 0) {
-        pieceLink += databaseData[id].docID.split(",")[0];
-    } else {
-        pieceLink += databaseData[id].docID;
-    }
+    var docID = databaseData[id].docID;
+    pieceLink += docID.indexOf(",") > 0 ? docID.split(",")[0] : docID;
 
-    return previewTemplate.replace("[PIECEID]",id).replace("[PREVIEWLINK]",pieceLink).replace("[PIECENAME]",databaseData[id].title).replace("[PIECENAME]",databaseData[id].title).replace("[PIECEAUTHOR]",databaseData[id].author).replace("[PIECEDESC]",databaseData[id].desc);
+    return previewTemplate.replace("[PIECEID]", id).replace("[PREVIEWLINK]", pieceLink).replace("[PIECENAME]", databaseData[id].title).replace("[PIECENAME]", databaseData[id].title).replace("[PIECEAUTHOR]", databaseData[id].author).replace("[PIECEDESC]", databaseData[id].desc);
 }
 
 function renderPieces(centerPieceIndex, direction) {
     var ID_LIST = Object.keys(databaseData);
     var cpi = centerPieceIndex;
-    var topPiece = "";
-    if (cpi > 0) {
-        topPiece = submissionHTML(ID_LIST[cpi-1]).replace("[ANIMATION]",(direction=="up" ? "center2top" : "off2top")).replace("[FUNCTION]","goPrev();");
-    }
-    var centerPiece = submissionHTML(ID_LIST[cpi]).replace("[ANIMATION]",(direction=="up" ? "bottom2center" : "top2center")).replace("[FUNCTION]","window.location.href=\'/v/"+currentClass+"/?id="+ID_LIST[cpi]+"\'\;");
-    var bottomPiece = "";
-    if (cpi < ID_LIST.length-1) {
-        bottomPiece = submissionHTML(ID_LIST[cpi+1]).replace("[ANIMATION]",(direction=="up" ? "off2bottom" : "center2bottom")).replace("[FUNCTION]","goNext();");
-    }
+    var topPiece = cpi > 0 ? submissionHTML(ID_LIST[cpi - 1]).replace("[ANIMATION]", (direction == "up" ? "center2top" : "off2top")).replace("[FUNCTION]", "goPrev();") : "";
+    var centerPiece = submissionHTML(ID_LIST[cpi]).replace("[ANIMATION]", (direction == "up" ? "bottom2center" : "top2center")).replace("[FUNCTION]", "window.location.href='/v/" + currentClass + "/?id=" + ID_LIST[cpi] + "'");
+    var bottomPiece = cpi < ID_LIST.length - 1 ? submissionHTML(ID_LIST[cpi + 1]).replace("[ANIMATION]", (direction == "up" ? "off2bottom" : "center2bottom")).replace("[FUNCTION]", "goNext();") : "";
     mainbody.innerHTML = topPiece + centerPiece + bottomPiece;
 }
 
 function goNext() {
-    if (focusedIndex < Object.keys(databaseData).length-1) {
+    if (focusedIndex < Object.keys(databaseData).length - 1) {
         focusedIndex++;
-        renderPieces(focusedIndex,"up");
+        renderPieces(focusedIndex, "up");
     }
 }
+
 function goPrev() {
     if (focusedIndex > 0) {
         focusedIndex--;
-        renderPieces(focusedIndex,"down");
+        renderPieces(focusedIndex, "down");
     }
 }
+
 var keyEvent = (event) => {
     if (isKeyRunning) return;
     isKeyRunning = true;
@@ -120,7 +93,7 @@ var keyEvent = (event) => {
     }, 500);
 };
 
-window.addEventListener("keydown",keyEvent,true,);
+window.addEventListener("keydown", keyEvent, true);
 
 var mouseEvent = (event) => {
     if (isRunning) return;
@@ -149,28 +122,25 @@ var mouseEvent = (event) => {
 };
 window.addEventListener("wheel", mouseEvent);
 
-let touchstartY = 0
-let touchendY = 0
-    
-function checkDirection() {
-if (touchendY < touchstartY && (touchstartY-touchendY > 100)) goNext();
-if (touchendY > touchstartY  && (touchendY-touchstartY > 100)) goPrev();
-}
-
 document.addEventListener('touchstart', e => {
-touchstartY = e.changedTouches[0].screenY;
+    touchstartY = e.changedTouches[0].screenY;
 });
 
 document.addEventListener('touchend', e => {
-touchendY = e.changedTouches[0].screenY;
-checkDirection();
+    touchendY = e.changedTouches[0].screenY;
+    if (touchendY < touchstartY && (touchstartY - touchendY > 100)) {
+        goNext();
+    }
+    if (touchendY > touchstartY && (touchendY - touchstartY > 100)) {
+        goPrev();
+    }
 });
 
 function a(artClass) {
-    if (artClass==="lit" || artClass==="art" || artClass==="mv") {
+    if (artClass === "lit" || artClass === "art" || artClass === "mv") {
         previewTemplate = litTemplate;
     }
     mainbody = document.getElementById("mainBody");
-    currentClass=artClass;
+    currentClass = artClass;
     loadSubmissions(artClass);
 }
