@@ -167,7 +167,7 @@ checkDirection();
 });
 
 function a(artClass) {
-    if (artClass=="lit" || artClass=="art" || artClass=="mv") {
+    if (artClass==="lit" || artClass==="art" || artClass==="mv") {
         previewTemplate = litTemplate;
     }
     mainbody = document.getElementById("mainBody");
