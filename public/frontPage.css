@@ -136,3 +136,26 @@ html, body {
     left: -150%;
   }
 }
+
+.split {
+  height:100%;
+  position: fixed;
+  z-fixed: 1;
+  top:0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left1 .left2 {
+  left:0;
+  width: 30%;
+  background:#000;
+  color: #FFFFFF;
+}
+
+.right1 .right2 {
+  right:0;
+  width:70%;
+  background: #FFFFFF;
+  color:#000;
+}
