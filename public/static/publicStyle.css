@@ -26,8 +26,8 @@ body {
 }
 #navbar {
   position: relative;
-  background: rgb(255,137,242);
-  background: linear-gradient(180deg, rgba(255,137,242,1) 4%, rgba(255,139,229,1) 4%, rgba(255,137,242,1) 16%, rgba(206,113,228,1) 42%, rgba(184,115,245,1) 64%, rgba(162,116,240,1) 80%);
+  background: rgb(255,137,242) !important;
+  background: linear-gradient(180deg, rgba(255,137,242,1) 4%, rgba(255,139,229,1) 4%, rgba(255,137,242,1) 16%, rgba(206,113,228,1) 42%, rgba(184,115,245,1) 64%, rgba(162,116,240,1) 80%) !important;
   backdrop-filter: blur(15px);
   width: 100%;
   height: 10vh;
@@ -68,7 +68,7 @@ body {
   background-color: hsla(304, 55%, 23%, 0.25); /* dark-violet, but transparent */
 }
 .activeLink {
-  color: var(--darker-grey) !important;
+/*   color: var(--darker-grey) !important; */
 }
 #mobileNavbar {
   display: none;
