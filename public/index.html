@@ -63,6 +63,7 @@
       <img id="downArrow" src="/static/Down Icon.svg"  onclick="toggleDrop();"/>
     </section>
     -->
+    
     <!-- Commenting out the moving background for home page until I get home page up and running with good css 
     <section id="catalogAd">
       <h3 id="banner">NEW! NEW! NEW! NEW! NEW! NEW! NEW!</h3>
@@ -104,50 +105,100 @@
   </section -->
   <!-- End of Original Split Section -->
   <!-- Start of Newer Navbar -->
-  <section class="navbar-whole">
+    <section class="navbar-whole">
     <!-- Commenting out the image until I figure out how file paths and image src work within the files themselves on github -->
     <!--img src="public/static/clipart/lenses_logo_navbar.png" class="navbar-top"-->
-    <h3>Lenses</h3>
-    <nav class="navbar-items navbar-expand-lg">
-      <div class="container-fluid">
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Submissions</a>
-          </li>
-        </ul>
+      <h3> Lenses </h3>
+      <nav class="navbar-items navbar-expand-lg">
+        <div class="container-fluid">
+          <ul>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Submissions</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- End of Newer Navbar -->
+    <!-- Start of Main Section -->
+    <section id="siteDesc" class="main">
+      <div class="hero">
+        <div class="row">
+          <div class="col-md-8">
+            <h1>Welcome to Lenses!</h1>
+            <h4> We are Lenses Literary and Arts Magazine, a magazine (both digital and
+physical) managed by Doral Academy students for Doral Academy students.
+Our mission is to provide a unique platform for showcasing the creative talents
+of our peers. With us, young artists of all kinds gain the opportunity to have
+their work featured, receive recognition, and build a portfolio of published art. </h4>
+          </div>
+          <div class="col-md-4">
+            <img src="..." alt="First Magazine Cover">
+            <h3> Cover of our first magazine thanks to Poised Photography </h3>
+          </div>
+        </div>
       </div>
-    </nav>
-  </section>
-  <!-- End of Newer Navbar -->
-  <!-- Start of Main Section -->
-  <section id="siteDesc" class="main">
-    <div class="row">
-      <div class="col-md-8">
-        <h1>Welcome to Lenses!</h1>
-        <h2> Placeholder Text </h2>
-        <p> Every time we say goodbye, I die a little.
-Every time we say goodbye, I wonder why a little.
-Why the gods above me, who must be in the know,
-think so little of me they allow you to go.
-When you're near there's such an air of spring about it.
-I can hear a lark somewhere begin to sing about it.
-There's no love song finer but how strange the change from major to
-minor,
-Every time we say goodbye, every single time we say goodbye. </p>
+    </section>
+
+    <!-- Start of Carousel Section -->
+    <section class="art-carousel container-fluid">
+      <h2> Featured Works </h2>
+      <hr>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-interval="5000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- Item 1 -->
+            <a href="/v/404.html" target="_blank">
+              <img src="https://unityforequality.org/wp-content/uploads/2024/04/169378225_1202358086850810_4071501067896855000_n.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5> Featured Work 1 </h5>
+                <p>Description 1</p>
+              </div>
+            </a>
+          </div>
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <a href="/v/404.html"  target="_blank">
+              <img src="https://unityforequality.org/wp-content/uploads/2024/04/168535525_1200660607020558_685861260587883278_n.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5> Featured Work 2 </h5>
+                <p>Description 2</p>
+              </div>
+            </a>
+          </div>
+        <!-- Item 3 -->
+          <div class="carousel-item">
+            <a href="/v/404.html"  target="_blank">
+              <img src="https://unityforequality.org/wp-content/uploads/2024/04/DSC_9066.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5> Featured Work 3 </h5>
+                <p>Description 3</p>
+              </div>
+            </a>
+          </div>
       </div>
-      <div class="col-md-4">
-        <img src="..." alt="Lenses Logo" id="Logo">
-        <p> Cover of our First Magazine </p>
-        <p> Thank you to Poised <!--(i think?) --></p>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </section>
+
     
     <footer>
       <p style="padding-top: 2em">made with love, for art &lt;3 (now in purple!)</p>
