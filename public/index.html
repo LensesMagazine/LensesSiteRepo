@@ -39,6 +39,7 @@
     <!--meta http-equiv="refresh" content="1"-->
   </head>
   <body data-lang="en">
+    <!-- Commenting this out for now until I fix the Navbar fully 
     <section id="navbar">
       <h1 id="lensesTitle">Lenses</h1>
 
@@ -61,6 +62,8 @@
       </div>
       <img id="downArrow" src="/static/Down Icon.svg"  onclick="toggleDrop();"/>
     </section>
+    -->
+    <!-- Commenting out the moving background for home page until I get home page up and running with good css 
     <section id="catalogAd">
       <h3 id="banner">NEW! NEW! NEW! NEW! NEW! NEW! NEW!</h3>
       <div id="catalogDescHolder">
@@ -72,6 +75,8 @@
       </div>
       <button id="motionStop" class="stopmoving" onclick="aniToggle();">stop moving!</button>
   </section>
+    -->
+    
   <!-- Original Split Section -->
   <!--section id="siteDesc">
     <div class="split left1">
@@ -98,13 +103,46 @@
     </div>
   </section -->
   <!-- End of Original Split Section -->
-  <section id="siteDesc">
+  <!-- Start of Newer Navbar -->
+  <section class="navbar-whole">
+    <img src="/b/static/clipart/logo-navbar" class="navbar-top">
+    <nav class="navbar-items navbar-expand-lg">
+      <div class="container-fluid">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Submissions</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <!-- End of Newer Navbar -->
+  <!-- Start of Main Section -->
+  <section id="siteDesc" class="main">
     <div class="row">
       <div class="col-md-8">
-        <h3>Who We Are</h3>
+        <h1>Welcome to Lenses!</h1>
+        <h2> Placeholder Text </h2>
+        <p> Every time we say goodbye, I die a little.
+Every time we say goodbye, I wonder why a little.
+Why the gods above me, who must be in the know,
+think so little of me they allow you to go.
+When you're near there's such an air of spring about it.
+I can hear a lark somewhere begin to sing about it.
+There's no love song finer but how strange the change from major to
+minor,
+Every time we say goodbye, every single time we say goodbye. </p>
       </div>
       <div class="col-md-4">
         <img src="..." alt="Lenses Logo" id="Logo">
+        <p> Cover of our First Magazine </p>
+        <p> Thank you to Poised <!--(i think?) --></p>
       </div>
     </div>
   </section>
