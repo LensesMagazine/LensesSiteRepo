@@ -12,6 +12,8 @@
   --off-grey: hsla(288, 2%, 55%, 1);
   --off-white: rgb(246, 244, 247);    
 }
+
+/*  Might remove important CSS, but it might just need to be redone completely  IMPORTANT
 body {
   background: rgb(17,15,16);
   background: linear-gradient(0deg, rgba(17,15,16,1) 75%, rgba(77,14,71,1) 91%, rgba(153,44,146,1) 100%);
@@ -24,6 +26,8 @@ body {
   text-align: center;
   user-select: none;
 }
+*/
+
 #navbar {
   position: relative;
   background: rgb(255,137,242) !important;
@@ -77,6 +81,8 @@ body {
   height: 90vh;
   width: 100%;
 }
+
+/*  Might remove important CSS, but it might just need to be redone completely IMPORTANT
 footer {
   background-color: var(--darker-violet);
   color: var(--off-grey);
@@ -86,7 +92,7 @@ footer {
   z-index: 100;
   position: absolute;
 }
-
+*/
 /*
 
 BEGIN MOBILE VIEW SHENANIGANS
