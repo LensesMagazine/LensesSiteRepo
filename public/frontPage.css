@@ -137,6 +137,8 @@ html, body {
   }
 }
 
+
+/* Commenting this bit out b/c it has no use at the moment since there are no splits used
 .split {
   height:100%;
   position: fixed;
@@ -158,4 +160,33 @@ html, body {
   width:70%;
   background: #FFFFFF;
   color:#000;
+}
+*/
+
+.navbar-whole {
+  background-color:#FFF4D3;
+}
+
+/*
+.navbar-top {
+  display: flex;
+  justify-content: center;
+  background: rgb(255,154,232) !important;
+  background: linear-gradient(180deg, rgba(255,154,232,1) 5%, rgba(230,123,227,1) 64%, rgba(206,113,228,1) 100%);
+  height: 80px;
+  font-size: 4rem;
+  color: white !important;
+}
+*/
+
+.navbar-items ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  background:#FFF4D3;
+  color:#570057;
+}
+
+body{
+  background: #FFF;
 }
