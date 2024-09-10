@@ -187,6 +187,15 @@ html, body {
   color:#570057;
 }
 
+.nav-link {
+  opacity: 1;
+}
+.nav-link:hover{
+  opacity: 1;
+  background-color: #470b47;
+  color: white !important;
+}
+
 body{
-  background: #FFF;
+  background: #FFF !important;
 }
