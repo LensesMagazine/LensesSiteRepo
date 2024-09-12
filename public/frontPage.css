@@ -163,11 +163,14 @@ html, body {
 }
 */
 
+body{
+  background: #FFF !important;
+}
+
+/* Navbar Styles */
 .navbar-whole {
   background-color:#FFF4D3;
 }
-
-
 .navbar-top {
   display: flex;
   justify-content: center;
@@ -177,8 +180,6 @@ html, body {
   font-size: 4rem;
   color: white !important;
 }
-
-
 .navbar-items ul{
   list-style-type: none;
   display: flex;
@@ -186,7 +187,6 @@ html, body {
   background:#FFF4D3;
   color:#570057;
 }
-
 .nav-link {
   opacity: 1;
 }
@@ -196,6 +196,52 @@ html, body {
   color: white !important;
 }
 
-body{
-  background: #FFF !important;
+/* Row/Column */
+
+
+/* Carousel Styles*/
+.art-carousel {
+  text-align: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  background-color: #5da5d5;
+}
+.art-carousel h2 {
+  color: white;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 39pt;
+}
+.art-carousel hr {
+  margin-bottom: 25px;
+}
+.carousel-caption {
+  color: #ffffff !important;
+  /*#8cff00*/
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  font-size: 18pt;
+  font-family: Lora;
+}
+.carousel-caption h5 {
+  font-size: 1.75em;
+}
+.carousel-caption p {
+  font-size: 1.2em;
+}
+.carousel-inner img {
+  margin: auto;
+  max-height: 850px;
+  max-width: 1100px;
+}
+.carousel a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.carousel {
+  border: 5px;
+  border-color: black;
 }
