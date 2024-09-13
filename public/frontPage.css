@@ -170,6 +170,8 @@ body{
 /* Navbar Styles */
 .navbar-whole {
   background-color:#FFF4D3;
+  margin-top:50px;
+  margin-bottom:50px;
 }
 .navbar-top {
   display: flex;
@@ -186,14 +188,14 @@ body{
   justify-content: space-evenly;
   background:#FFF4D3;
   color:#570057;
+  font-size: 2rem;
 }
 .nav-link {
   opacity: 1;
 }
 .nav-link:hover{
   opacity: 1;
-  background-color: #470b47;
-  color: white !important;
+  text-decoration: underline;
 }
 
 /* Row/Column */
@@ -210,8 +212,13 @@ body{
   /* Bold color for the title */
   font-family: 'Montserrat', sans-serif;
   /* Modern, clean font */
-  font-size: 2.5em;
+  font-size: 2.5rem;
   /* Prominent title size */
+}
+.hero .col-md-8 h4{
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Montserrat',sans-sarif;
 }
 .hero .col-md-4{
   align-content: center;
@@ -221,10 +228,12 @@ body{
   /* Bold color for the title */
   font-family: 'Montserrat', sans-serif;
   /* Modern, clean font */
-  font-size: 1.5em;
+  font-size: 1.5rem;
   /* Prominent title size */
 }
 .hero .col-md-4 img{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -273,4 +282,10 @@ body{
 .carousel {
   border: 5px;
   border-color: black;
+}
+
+/* Thank you section styles */
+.thank-you{
+  text-align: center;
+  font-size: 4rem;
 }
