@@ -5,12 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="frontPage.css">
+    <!--Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
 
   <body>
-    <h1>Gallery :) <a href="/">Click to return to home page (temp.)</a> </h1>
-    <a href="/">Click to return to home page (temp.)</a>
+    <!-- Start of Newer Navbar -->
+    <section class="navbar-whole">
+    <!-- Commenting out the image until I figure out how file paths and image src work within the files themselves on github -->
+    <!--img src="https://github.com/LensesMagazine/LensesSiteRepo/blob/main/public/static/clipart/lenses_logo_navbar.png?raw=true" class="navbar-top"-->
+      <h3 class="navbar-top"> Lenses </h3>
+      <nav class="navbar-items navbar-expand-lg">
+        <div class="container-fluid">
+          <ul>
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/b/submission">Submissions</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- End of Newer Navbar -->
+    <!-- Start of main section -->
+    <section class="gallery gallery-main">
+      <h1>Gallery</h1>
+      <hr>
+      <div class="gallery row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">2-D Art --></a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">3-D Art --></a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">Photography --></a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">Film --></a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">Poetry --></a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">Journalism --></a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">Short Stories --></a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">Music --></a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="www.google.com" target="_blank">Fashion --></a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/">Click to return to home page (temp.)</a>
+    </section>
+
+    
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>
 
