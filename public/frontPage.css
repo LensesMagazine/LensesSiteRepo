@@ -170,8 +170,8 @@ body{
 /* Navbar Styles */
 .navbar-whole {
   background-color:#FFF4D3;
-  margin-top:50px;
-  margin-bottom:50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .navbar-top {
   display: flex;
